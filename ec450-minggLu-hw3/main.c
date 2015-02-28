@@ -74,13 +74,14 @@ interrupt void WDT_interval_handler(){
 			last_button = b;
 			index++;
 		}
-		if(index >= 59){
+		if(index >= 59){				// if input exceed limit, go to mode 2
 			record[index] = interval;
 			interval = record[reset];
 			P1OUT |= GREEN;
 			index++;
 			mode = 2;
 		}
+		// if button is released for a long time, go to mode 2
 		if(interval >= 300 && index > 0 && b == 0){
 			record[index] = interval;
 			interval = record[reset];
