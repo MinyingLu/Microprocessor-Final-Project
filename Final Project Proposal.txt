@@ -1,0 +1,3 @@
+Team Member: Minying Lu, Niko Zapantis
+Description: We want to use a touchscreen pad to control the microprocessor to play music. 
+Components needed: We are not sure for everything yet, but we need touchscreen pad and jumper wires with resistor builed in. 
