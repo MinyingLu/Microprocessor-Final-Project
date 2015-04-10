@@ -1,0 +1,41 @@
+Minying Lu
+EC450 HW6
+Parter: Niko Zapantis
+
+Pull from adc example and spi example from course website.
+because master is transmitting and slave is receiving. 
+We connected port 1.7 to 1.7 on both launchpads, because it's in MOSI mode. 
+
+In master.c
+-----------------------------------
+referring to the ADC example from course website
+I used a potentiometer to manage the analog signal input 
+use the adc_handler to convert analog signal to digital signal
+save the converted signal to data_to_send variable. 
+and in wdt_handler I send data_to_send to the UBC0TXBUF buffer.
+Additionally, when I do that I shifted data_to_send by two bits
+to get a more stable output for the slave. 
+The signal will be transmitted to the slave through port 1.7 
+through SPI. 
+We also connect port 1.5 from master to port 1.5 to slave
+-----------------------------------
+
+In slave.c
+-----------------------------------
+We take advantage from the spi example from course website
+but only using the receive part of the code. 
+We also uses the knowledge from our last homework,
+so the speaker will play different frequency when receiving 
+different signal from the master. 
+In slave.c we set the UCMST to zero, 
+for the slave to be driven by master's clock.
+
+Niko saved the signal from UCB0RXBUF to data_received variable
+and pass the value into TA0CCR0 to change the output of the speaker
+(he also did some math to make sure the frequency is within a reasonable range)
+-----------------------------------
+
+virtues: We are able to demonstrate a very obvious relationship between the slave and master. 
+limitations: 
+We used some math to optimize the code, instead of using clock cycles and other more "microcontroller-ish" solution
+The slave can't talk back to master, it can only listen, but I think that's because we uses 3 pin implementation.  
