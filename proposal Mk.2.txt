@@ -1,6 +1,0 @@
-Team Member: Minying Lu, Niko Zapantis
-	For our project we want to try doing a sort of touch screen piano though we do need a bit more information about it first. One of the things we were looking at that we may need is resistive touch screen where some of the information can be found at 
-http://www.ti.com/lit/an/slaa384a/slaa384a.pdf
- which mentions exactly how it works. So we want it so when you touch a certain point on the touch pad it will play a different musical note depending on where it is, and one of the touch pads that we are looking at is 
-http://www.amazon.com/Tontec-Touchscreen-AT070TN90-Raspberry-Screen/dp/B00HI7XQEK/ref=sr_1_6?ie=UTF8&qid=1428948275&sr=8-6&keywords=resistive+touchscreen
-  , but we are unsure if that will walk and still need to talk to professor Giles first.

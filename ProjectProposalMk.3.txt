@@ -1,0 +1,12 @@
+﻿MSP430 RGB Color Finder
+
+
+        Our idea behind this project is to use the msp430 to find the RGB values of different colors. The main components of hardware that we intend to use (other than the msp430) are 3 different colored LEDs (Red, Green, and Blue) along with an LDR or photoresistor and a LCD. 
+Our approach to this is: first we measure black and white as a calibration along with defining our ranges. We intend to accomplish this by individually measuring the values of the LDR of each LED reflected off of the colored surface which would give us three values, we will have the measurement of white set to ideally {255,255,255} which is the upper bound of the range; and {0,0,0} for black as the lower bound. Though the values will vary a bit depending on our accuracy of measuring. In order to find the value of the other colors we get the three measurements and do some arithmetic involving the upper and lower bound which should give us a fairly accurate RGB value of the measured color. We then intend to display the RGB values on an LCD display or some other display in either their RGB numbers or in hex format.
+
+
+Components needed: 
+* 3 LEDs: Red, Green and Blue
+* 1 LDR
+* 1 LCD
+* ~200 resistor(s)
